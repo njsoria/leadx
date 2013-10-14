@@ -1,9 +1,10 @@
 Leadx::Application.routes.draw do
-  get "pages/login"
-  get "pages/home"
-  get "pages/about"
-  get "pages/contact"
-  get "pages/help"
+
+  root :to => "pages#home"
+  get '/contact', :to => 'pages#contact'
+  get '/about',   :to => 'pages#about'
+  get '/help',    :to => 'pages#help'
+  get '/login',   :to => 'pages#login'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
